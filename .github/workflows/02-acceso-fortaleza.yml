@@ -28,4 +28,4 @@ jobs:
         echo "Miembros"
         ls miembros/
         echo "Inteligencias"
-        ls intelligencia/
+        ls Inteligencia/

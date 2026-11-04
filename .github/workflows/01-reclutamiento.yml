@@ -1,40 +1,16 @@
-name: Reclutamiento de Agente
+name: Theo.Reclutamiento del agente
 
-# on: push
-on:
-  workflow_dispatch:
+on: push
 
 jobs:
   reporte-de-reclutamiento:
     runs-on: ubuntu-latest
-
     steps:
-      - name: El agente se presenta
-        run: echo "Soy Lex Luthor, y el líder de la Legión del Mal"
+    - name: El agente se presenta
+      run: echo "Detalles aprendiendo Github Actions"
 
-      - name: Reporte de identidad
-        run: |
-          echo "Reporte de identidad"
-          echo "===================="
-          echo ""
-          echo "Nombre clave: ${{ github.actor }}"
-          echo ""
-          echo "Contexto de Github"
-          echo "Repo: ${{ github.repository }}"
-          echo "Operación: ${{ github.sha }}"
-          echo "Metadata: ${{ toJson(github) }}"
+    - name: El agente se presenta
+      run: echo "Detalles aprendiendo Github Actions"
 
-      - name: Capacidades del agente
-        run: |
-          echo "Capacidades detectadas:"
-          echo "Sistema operativo"
-          uname -a
-          echo "Habilidades técnicas"
-          node --version
-          git --version
-          python3 --version
-
-      - name: Reconocimiento del terreno
-        run: |
-          echo "Reconocimiento del terreno"
-          ls /
+    - name: El agente se presenta
+      run: echo "Detalles aprendiendo Github Actions"

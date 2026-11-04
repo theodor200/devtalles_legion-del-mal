@@ -7,10 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: El agente se presenta
-      run: echo "Detalles aprendiendo Github Actions"
-
-    - name: El agente se presenta
-      run: echo "Detalles aprendiendo Github Actions"
-
-    - name: El agente se presenta
-      run: echo "Detalles aprendiendo Github Actions"
+      run: |
+        echo "Reporte de identidad"
+        echo "======================="
+        echo ""
+        echo "Nombre del agente: ${{ github.actor }}"
+        echo ""
+        echo "Repositorio: ${{ github.repository }}"
+        echo "Operaciono : ${{ github.sha}}"
+        echo "Metadata : ${{ toJson(github)}}"

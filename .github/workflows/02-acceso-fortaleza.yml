@@ -1,8 +1,6 @@
 name: 🏯Acceso a la fortaleza 🚀
 
-on:
-  workflow_dispatch:
-
+on: push
 
 jobs:
   acceso-a-la-base:

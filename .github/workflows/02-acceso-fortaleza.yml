@@ -1,17 +1,33 @@
 name: 🏯Acceso a la fortaleza 🚀
 
-on: push
+on:
+  workflow_dispatch: 
 
 jobs:
   acceso-a-la-base:
     runs-on: ubuntu-latest
 
     steps:
-      - name: El agente llega a la fortaleza
-        run: |
-          echo "Agente ${{ github.actor }} ha llegado a la fortaleza."
-          echo ""
-          echo "Buscar los archivos de la legion"
-          ls -la
-          echo ""
-          echo "✖️ pero que paso no hay nada"
+    - name: El agente llega a la fortaleza
+      run: |
+        echo "Agente ${{ github.actor }} ha llegado a la fortaleza."
+        echo ""
+        echo "Buscar los archivos de la legion"
+        ls -la
+        echo ""
+        echo "✖️ pero que paso no hay nada"
+    - name: "Desblolquea la boveda"
+      uses: actions/checkout@v4
+    - name: "Vamos a ver los planes"
+      run: |
+        echo "Buscar los registros de la legion"
+        ls -la
+        echo "👌 Funciona"
+        echo ""
+        echo "Planes"
+        ls planes/
+        echo "Villanos"
+        ls villanos/
+        echo "Inteligencia"
+        ls intelligencia/
+  

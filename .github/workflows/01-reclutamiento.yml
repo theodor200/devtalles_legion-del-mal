@@ -5,6 +5,7 @@ on: push
 jobs:
   reporte-de-reclutamiento:
     runs-on: ubuntu-latest
+
     steps:
     - name: El agente se presenta
       run: |
@@ -16,3 +17,28 @@ jobs:
         echo "Repositorio: ${{ github.repository }}"
         echo "Operaciono : ${{ github.sha}}"
         echo "Metadata : ${{ toJson(github)}}"
+    - name: Capacidades del agente
+      run: |
+        echo "Reporte de capacidades"
+        echo "======================="
+        echo ""
+        echo "Sistema operativo: $(uname -a)"
+        echo "Versión del kernel: $(uname -r)"
+        echo "Arquitectura: $(uname -m)"
+        echo ""
+        echo "Lenguajes instalados:"
+        echo "- Python: $(python3 --version || echo 'No instalado')"
+        echo "- Node.js: $(node --version || echo 'No instalado')"
+        echo "- Java: $(java -version 2>&1 | head -n 1 || echo 'No instalado')"
+    - name: Reconocimiento del terreno"
+      run: |
+        echo "Reporte de reconocimiento del terreno"
+        ls/
+        echo "====================================="
+        echo ""
+        echo "Directorio actual: $(pwd)"
+        echo "Archivos en el directorio:"
+        ls -la
+        echo ""
+        echo "Espacio en disco:"
+        df -h

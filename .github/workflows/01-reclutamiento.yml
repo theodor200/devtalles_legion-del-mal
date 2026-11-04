@@ -33,7 +33,7 @@ jobs:
     - name: Reconocimiento del terreno"
       run: |
         echo "Reporte de reconocimiento del terreno"
-        ls/
+        ls /
         echo "====================================="
         echo ""
         echo "Directorio actual: $(pwd)"

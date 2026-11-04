@@ -1,6 +1,7 @@
 name: Theo.Reclutamiento del agente
 
-on: push
+on:
+  workflow_dispatch:
 
 jobs:
   reporte-de-reclutamiento:

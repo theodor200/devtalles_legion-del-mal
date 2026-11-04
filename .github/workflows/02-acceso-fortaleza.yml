@@ -1,8 +1,6 @@
 name: 🏯Acceso a la fortaleza 🚀
 
-on:
-  workflow_dispatch:
-
+on: push
 
 jobs:
   acceso-a-la-base:
@@ -27,7 +25,7 @@ jobs:
         echo ""
         echo "Planes"
         ls planes/
-        echo "Villanos"
-        ls villanos/
+        echo "Miembros"
+        ls miembros/
         echo "Inteligencias"
         ls intelligencia/

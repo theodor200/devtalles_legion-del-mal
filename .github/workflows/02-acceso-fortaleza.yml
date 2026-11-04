@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: El agente llega a la fortaleza
+    - name: 🏯 El agente llega a la fortaleza
       run: |
         echo "Agente ${{ github.actor }} ha llegado a la fortaleza."
         echo ""
@@ -16,13 +16,13 @@ jobs:
         ls -la
         echo ""
         echo "✖️ pero que paso no hay nada"
-    - name: "Desblolquea la boveda"
+    - name: "🔓 Desblolquea la boveda"
       uses: actions/checkout@v4
-    - name: "Vamos a ver los planes"
+    - name: "📋 Vamos a ver los planes"
       run: |
-        echo "Buscar los registros de la legion"
+        echo "🕵️ Buscar los registros de la legion"
         ls -la
-        echo "👌 Funciona"
+        echo "🆗 Funciona"
         echo ""
         echo "Planes"
         ls planes/

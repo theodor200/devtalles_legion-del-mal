@@ -17,8 +17,8 @@ on:
         type: choice
         options:
           - fire
-          - homer
-          - ibm
+          - dragon
+          - eyes  
 
 jobs:
   transmitir-mensaje:

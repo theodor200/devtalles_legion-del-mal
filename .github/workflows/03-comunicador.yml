@@ -1,0 +1,41 @@
+name: 📣Comunicador de la legion
+
+on:
+  workflow_dispatch:
+    inputs:
+      villano:
+        description: Elige el villano.
+        required: true
+        type: choice
+        options:
+          - Malito
+          - Jocker
+          - Dracula
+      figura:
+        description: Elige la figura.
+        required: true
+        type: choice
+        options:
+          - fire
+          - homer
+          - ibm
+
+jobs:
+  transmitir-mensaje:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Instalar transmisor de mensajes
+      run: sudo apt-get install -y cowsay
+    
+    - name: Transmitir mensaje
+      run: |
+        echo "================================"
+        echo "Mensaje de la legion"
+        echo "================================"
+        echo ""
+        echo "El villano elegido es: ${{ inputs.villano }}"
+        echo "La figura elegida es: ${{ inputs.figura }}"
+        cowsay -f ${{ inputs.figura }}
+        echo "FIN💣💣"
+        
